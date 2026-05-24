@@ -1,4 +1,4 @@
-﻿/* ========================================
+/* ========================================
    PREMIUM PROFESSIONAL WEBSITE - CSS3
    Modern, Accessible, High-Performance
    ======================================== */
@@ -115,6 +115,7 @@ html {
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -127,6 +128,7 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-wrap: break-word;
+    -webkit-overflow-scrolling: touch;
 }
 
 main, .footer {
@@ -233,6 +235,10 @@ a:hover {
     z-index: 999;
     transition: all var(--transition-base);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.header {
+    will-change: transform;
 }
 
 .header.scrolled {
@@ -2100,7 +2106,7 @@ section[id] {
 }
 
 /* ========================================
-   27. CRO & HYPE SECTIONS (FinMox Update)
+   27. CRO & HYPE SECTIONS (FinGranz Update)
    ======================================== */
 
 /* === FLEX METRICS BAR === */
@@ -2138,7 +2144,7 @@ section[id] {
     color: var(--color-gray-100);
 }
 
-/* === THE FINMOX IMPACT (WALL OF WINS) === */
+/* === THE FINGRANZ IMPACT (WALL OF WINS) === */
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
@@ -2805,6 +2811,13 @@ section[id] {
 
     .hero-text {
         order: 1;
+    }
+}
+
+/* Videos grid — single column on mobile */
+@media (max-width: 768px) {
+    .impact-videos-grid {
+        grid-template-columns: 1fr !important;
     }
 }
 

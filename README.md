@@ -1,12 +1,12 @@
-# 🌟 Finmox - Premium Professional Website
+# 🌟 Fingranz - Premium Professional Website
 
-A production-grade, high-end bilingual professional website for Finmox, built with modern HTML5, CSS3, and ES6+ JavaScript.
+A production-grade, high-end bilingual professional website for Fingranz, built with modern HTML5, CSS3, and ES6+ JavaScript.
 
 ---
 
 ## 📋 Project Overview
 
-This is a **premium, modern, professional website** for Rathnakar Ambig, featuring:
+This is a **premium, modern, professional website** for Ratnakar Ambig, featuring:
 
 ### 🎯 Core Features
 - **Bilingual Support**: English & Kannada (ಕನ್ನಡ) with real-time language switching
@@ -211,7 +211,7 @@ In `index.html`, find and update:
 <a href="tel:+919XXXXXXXXX">+91 XXXXXXXXX</a>
 
 <!-- Email -->
-<a href="mailto:finmox.official@gmail.com">finmox.official@gmail.com</a>
+<a href="mailto:fingranz.official@gmail.com">fingranz.official@gmail.com</a>
 
 <!-- WhatsApp -->
 <a href="https://wa.me/919XXXXXXXXX">Click here for WhatsApp</a>
@@ -389,13 +389,13 @@ if (window.gtag) {
 
 ## 📄 License
 
-This website is created for Finmox's professional use.
+This website is created for Fingranz's professional use.
 
 ---
 
 ## 👨‍💼 Professional Information
 
-**Name**: Rathnakar Ambig
+**Name**: Ratnakar Ambig
 **Qualification**: MBA in Finance
 **Experience**: 15+ years in Banking & Insurance
 **Current Role**: SBI Life Insurance (High Performance Career since 2022)
@@ -406,7 +406,7 @@ This website is created for Finmox's professional use.
 ## 📞 Support & Customization
 
 For any questions or customizations needed:
-- **Email**: finmox.official@gmail.com
+- **Email**: fingranz.official@gmail.com
 - **Phone**: +91 XXXXXXXXX
 - **Location**: Karwar, Karnataka, India
 
@@ -419,4 +419,4 @@ For any questions or customizations needed:
 ---
 
 **Built with ❤️ for trust, transparency, and professional excellence.**
-**© 2024 Finmox. All rights reserved.**
+**© 2024 Fingranz. All rights reserved.**

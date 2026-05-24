@@ -147,12 +147,14 @@ class MobileMenuHandler {
     open() {
         appState.mobileMenuOpen = true;
         domCache.navMenu?.classList.add('active');
+        document.body.style.overflow = 'hidden';
         this.animateMenuToggle(true);
     }
 
     close() {
         appState.mobileMenuOpen = false;
         domCache.navMenu?.classList.remove('active');
+        document.body.style.overflow = '';
         this.animateMenuToggle(false);
     }
 
@@ -177,16 +179,27 @@ class MobileMenuHandler {
 class HeaderScrollEffect {
     constructor() {
         this.lastScrollTop = 0;
+        this.ticking = false;
         this.init();
     }
 
     init() {
-        window.addEventListener('scroll', () => this.handleScroll());
+        window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+    }
+
+    onScroll() {
+        if (!this.ticking) {
+            requestAnimationFrame(() => {
+                this.handleScroll();
+                this.ticking = false;
+            });
+            this.ticking = true;
+        }
     }
 
     handleScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         // Add shadow effect when scrolled
         if (scrollTop > 50) {
             domCache.header?.classList.add('scrolled');
@@ -232,13 +245,15 @@ class SmoothScroller {
     }
 
     scrollToElement(element) {
-        const offset = 90; // Header height fixed
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-        
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
+        const headerEl = domCache.header;
+        const offset = (headerEl ? headerEl.getBoundingClientRect().height : 80) + 8;
+        requestAnimationFrame(() => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         });
     }
 }
@@ -332,7 +347,7 @@ class ContactFormHandler {
         try {
             // Build WhatsApp message with lead details
             const lines = [
-                `Hi FinMox! I found your website and need guidance.`,
+                `Hi FinGranz! I found your website and need guidance.`,
                 ``,
                 `👤 Name: ${formData.name}`,
                 `📞 Phone: ${formData.phone}`,
